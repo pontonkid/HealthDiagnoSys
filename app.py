@@ -3,6 +3,34 @@ import re
 import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.naive_bayes import MultinomialNB
+import numpy as np
+from sklearn.model_selection import train_test_split
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.metrics import accuracy_score, classification_report
+import tensorflow as tf
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.naive_bayes import MultinomialNB
+from sklearn.metrics import classification_report, confusion_matrix, accuracy_score
+import nltk
+from nltk.corpus import stopwords
+from nltk.stem import PorterStemmer
+from gensim.models import Word2Vec
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+
+# for using TensorFlow for deep learning
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense
+from tensorflow.keras.optimizers import Adam
+from tensorflow.keras.losses import categorical_crossentropy
+
+# for using PyTorch for deep learning
+import torch
+import torch.nn as nn
+import torch.optim as optim
+import torch.nn.functional as F
+
 
 # Load your symptom-disease data
 data = pd.read_csv("Symptom2Disease.csv")
